@@ -1,0 +1,13 @@
+{
+  "root_cause": "windows-service-security-enrichment deadline",
+  "reasons": [
+    "windows-service-account-security: windows-service-security-enrichment: context deadline exceeded",
+    "services: windows-service-object-security: windows-service-security-enrichment: context deadline exceeded",
+    "windows-service-path-security: windows-service-security-enrichment: context deadline exceeded",
+    "windows-service-recovery-security: windows-service-security-enrichment: context deadline exceeded",
+    "windows-service-registry-security: windows-service-security-enrichment: context deadline exceeded",
+    "windows-service-security: windows-service-security-enrichment: context deadline exceeded",
+    "persistence.source.services: windows-service-account-security: windows-service-security-enrichment: context deadline exceeded",
+    "persistence: persistence.source.services: windows-service-registry-security: windows-service-security-enrichment: context deadline exceeded"
+  ]
+}

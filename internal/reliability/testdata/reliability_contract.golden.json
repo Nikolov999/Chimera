@@ -1,0 +1,22 @@
+{
+  "schema": "chimera.reliability/v1-phase116",
+  "engine": "reliability/phase116-v1",
+  "max_workers": 64,
+  "max_evidence_observations": 250000,
+  "max_provider_evidence": 100000,
+  "max_degradation_reasons": 4096,
+  "collector_timeout": "20s",
+  "stable_config_read_limit_bytes": 8388608,
+  "stable_intelligence_read_limit_bytes": 67108864,
+  "supported_build_targets": [
+    "darwin/amd64",
+    "darwin/arm64",
+    "linux/amd64",
+    "linux/arm64",
+    "windows/amd64",
+    "windows/arm64"
+  ],
+  "ordinary_scan_network_policy": "no direct outbound network APIs; intelligence refresh is explicit maintenance only",
+  "provider_panic_policy": "contain panic, mark provider PARTIAL, continue assessment with explicit degradation",
+  "invalid_provider_evidence_policy": "quarantine invalid/duplicate observations, preserve valid bounded evidence, mark provider degraded"
+}

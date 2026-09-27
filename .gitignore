@@ -1,0 +1,26 @@
+# Build outputs
+/chimera
+/chimera.exe
+/bin/
+/dist/
+*.out
+*.test
+*.prof
+*.cover
+coverage.*
+
+# Generated assessment output
+*.sarif
+*.log
+
+# Local configuration / secrets
+.env
+.env.*
+!.env.example
+chimera.local.json
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

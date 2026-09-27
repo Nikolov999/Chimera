@@ -1,0 +1,65 @@
+{
+  "timeout": "30s",
+  "profile": "default",
+  "severity": "INFO",
+  "category": "",
+  "include": [],
+  "exclude": [],
+  "offline": false,
+  "max_workers": 8,
+  "custom_profiles": [
+    {
+      "name": "prod-web",
+      "extends": "server",
+      "description": "Example production web-server policy",
+      "disabled_rules": [
+        "CHM-CTR-023"
+      ],
+      "severity_overrides": {
+        "CHM-NET-008": "HIGH"
+      },
+      "environment": {
+        "environment": "production",
+        "role": "web"
+      },
+      "service_policy_mode": "required",
+      "port_policy_mode": "required",
+      "expected_services": [
+        {
+          "name": "sshd",
+          "state": "RUNNING",
+          "required": false
+        }
+      ],
+      "expected_ports": [
+        {
+          "protocol": "TCP",
+          "port": 443,
+          "binding": "EXTERNAL",
+          "required": true
+        }
+      ],
+      "allowed_exceptions": [
+        {
+          "kind": "port",
+          "match": "tcp/9100",
+          "reason": "approved local telemetry listener"
+        }
+      ]
+    }
+  ],
+  "suppressions": [
+    {
+      "id": "SEC-EXAMPLE-001",
+      "rule_id": "CHM-NET-008",
+      "reason": "Temporary approved exception while the production firewall policy is being migrated",
+      "owner": "security-platform",
+      "created_at": "2026-08-20T06:00:00Z",
+      "expires_at": "2030-01-01T00:00:00Z",
+      "metadata": {
+        "ticket": "SEC-EXAMPLE-001",
+        "environment": "production"
+      }
+    }
+  ]
+}

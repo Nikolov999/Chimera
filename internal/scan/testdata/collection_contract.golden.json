@@ -1,0 +1,47 @@
+{
+  "state": "DEGRADED",
+  "timing": {
+    "started_at": "2026-08-20T08:00:00Z",
+    "completed_at": "2026-08-20T08:00:00.125Z",
+    "duration_ms": 125
+  },
+  "evidence": {
+    "total": 3,
+    "observed": 2,
+    "degraded": 1,
+    "denied": 0,
+    "unavailable": 0,
+    "unsupported": 0,
+    "not_applicable": 0
+  },
+  "providers": [
+    {
+      "name": "software",
+      "state": "DEGRADED",
+      "timing": {
+        "started_at": "2026-08-20T08:00:00Z",
+        "completed_at": "2026-08-20T08:00:00.1Z",
+        "duration_ms": 100
+      },
+      "evidence": {
+        "total": 2,
+        "observed": 2,
+        "degraded": 0,
+        "denied": 0,
+        "unavailable": 0,
+        "unsupported": 0,
+        "not_applicable": 0
+      },
+      "degradation_reasons": [
+        "one invalid provider observation quarantined"
+      ],
+      "panic_contained": false,
+      "invalid_evidence": 1,
+      "duplicate_evidence": 0,
+      "truncated": false
+    }
+  ],
+  "degradation_reasons": [
+    "one invalid provider observation quarantined"
+  ]
+}
